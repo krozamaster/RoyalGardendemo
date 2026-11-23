@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10100f">
+<title>Royal Garden Restaurant | Dhaka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#10100f;--panel:#191917;--cream:#f4efe5;--muted:#aaa69d;--gold:#dcae62;--line:#34332f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,90%);margin:auto}
+header{position:fixed;inset:0 0 auto;z-index:20;background:rgba(16,16,15,.82);backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:'Playfair Display';font-size:22px;font-weight:700;letter-spacing:.2px}.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:30px;color:#d4d0c7;font-size:13px}.navlinks a:hover{color:var(--gold)}.nav-cta{border:1px solid #9b7947;padding:11px 18px;border-radius:30px;color:var(--gold);font-size:12px}
+.hero{min-height:780px;display:flex;align-items:center;position:relative;isolation:isolate;padding:130px 0 80px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(12,12,11,.96) 0%,rgba(12,12,11,.78) 45%,rgba(12,12,11,.2) 100%),url('assets/grilled-chicken.jpg') center/cover;transform:scale(1.04);animation:slowzoom 18s ease-in-out infinite alternate}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:180px;background:linear-gradient(transparent,var(--bg));z-index:-1}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:11px;font-weight:700}.hero h1{font:800 clamp(48px,7vw,88px)/1.02 'Playfair Display';max-width:720px;margin:20px 0}.hero h1 em{color:var(--gold);font-style:normal}.hero p{color:#ddd7cb;line-height:1.8;max-width:510px;font-size:16px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:14px 22px;border-radius:30px;font-weight:700;font-size:13px;transition:.25s;display:inline-flex;align-items:center;gap:9px}.btn.gold{background:var(--gold);color:#17130c}.btn.outline{border:1px solid #ffffff55;color:white}.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px #0005}
+.hero-note{margin-top:55px;display:flex;gap:25px;flex-wrap:wrap;color:#d8d1c5;font-size:12px}.hero-note b{color:var(--gold);font-size:15px;display:block;margin-bottom:4px}
+section{padding:100px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:42px}.section-head h2{font:700 clamp(34px,5vw,52px)/1.1 'Playfair Display';margin:10px 0 0}.section-head p{color:var(--muted);max-width:420px;line-height:1.7;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-photo{position:relative}.about-photo img{width:100%;height:500px;object-fit:cover;border-radius:5px;filter:saturate(.88)}.photo-tag{position:absolute;bottom:22px;left:-20px;background:var(--gold);color:#19140c;padding:18px 22px;font-family:'Playfair Display';font-size:18px}.about-copy h2{font:700 48px/1.12 'Playfair Display';margin:12px 0 20px}.about-copy p{color:var(--muted);line-height:1.9;font-size:14px}.about-copy .bn{color:#e7d9bd}
+.menu-section{background:#171715}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.food-card{background:#20201d;border:1px solid #ffffff0d;overflow:hidden;transition:.35s}.food-card:hover{transform:translateY(-8px);border-color:#a77f43}.food-card img{width:100%;height:230px;object-fit:cover;display:block;transition:.6s}.food-card:hover img{transform:scale(1.05)}.food-info{padding:20px}.food-info h3{font:700 22px 'Playfair Display';margin:0 0 8px}.food-info p{color:var(--muted);font-size:13px;line-height:1.65;margin:0}.tag{color:var(--gold);font-size:10px;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:10px;display:block}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:220px 220px;gap:13px}.gallery img{width:100%;height:100%;object-fit:cover;filter:saturate(.8);transition:.4s}.gallery img:hover{filter:saturate(1.1);transform:scale(1.015)}.gallery img:first-child{grid-row:span 2}
+.visit{background:linear-gradient(135deg,#201d17,#121210);border-top:1px solid #ffffff10}.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.visit h2{font:700 48px 'Playfair Display';margin:12px 0 20px}.visit p{color:var(--muted);line-height:1.8}.info{border-top:1px solid var(--line);padding:18px 0;display:flex;gap:16px}.info b{min-width:100px;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:1px}.info span{font-size:14px;color:#e4dfd5;line-height:1.6}.map{min-height:330px;background:linear-gradient(145deg,#282923,#171916);border:1px solid #ffffff16;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}.map .pin{font-size:35px;color:var(--gold)}.map h3{font:700 27px 'Playfair Display';margin:12px}.map p{max-width:300px}
+footer{padding:35px 0;border-top:1px solid var(--line);color:#88847b;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{font:700 19px 'Playfair Display';color:var(--cream)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.reveal.show{opacity:1;transform:none}
+@keyframes slowzoom{to{transform:scale(1.12)}}@media(max-width:760px){.nav{height:66px}.navlinks{display:none}.hero{min-height:720px}.hero h1{font-size:55px}.about-grid,.visit-grid{grid-template-columns:1fr}.about-photo img{height:360px}.photo-tag{left:0}.menu-grid{grid-template-columns:1fr 1fr;gap:12px}.food-card img{height:155px}.food-info{padding:14px}.food-info h3{font-size:18px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery img:first-child{grid-row:span 2}.section-head{display:block}.section-head p{margin-top:15px}section{padding:75px 0}.about-copy h2,.visit h2{font-size:39px}}
+@media(max-width:430px){.menu-grid{grid-template-columns:1fr}.food-card img{height:210px}.hero-note{gap:16px}.hero h1{font-size:48px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#home">ROYAL <span>GARDEN</span></a><nav class="navlinks"><a href="#about">Our Story</a><a href="#menu">Food Menu</a><a href="#gallery">Gallery</a><a href="#visit">Find Us</a></nav><a class="nav-cta" href="#visit">VISIT US ↗</a></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap">
+<div class="eyebrow">A taste worth remembering · Dhaka</div>
+<h1>Good food.<br><em>Great moments.</em></h1>
+<p>Welcome to Royal Garden Restaurant — where flavour, comfort and warm hospitality come together. আপনার প্রিয় মানুষদের সাথে উপভোগ করুন সুন্দর কিছু মুহূর্ত, আর মজার সব খাবার।</p>
+<div class="actions"><a class="btn gold" href="#menu">EXPLORE OUR FOOD ↓</a><a class="btn outline" href="#visit">FIND OUR LOCATION ↗</a></div>
+<div class="hero-note"><div><b>4.6 / 5 ★</b>Guest rating · 37 reviews</div><div><b>Thai Restaurant</b>Food for every mood</div><div><b>Dhaka 1212</b>Bagan Bari, Madani Ave</div></div>
+</div></section>
+<section id="about"><div class="wrap about-grid"><div class="about-photo reveal"><img src="assets/restaurant-garden.jpg" alt="Royal Garden restaurant seating"><div class="photo-tag">Welcome to Royal Garden</div></div><div class="about-copy reveal"><div class="eyebrow">A little about us</div><h2>Made for food lovers & good company.</h2><p>Royal Garden Restaurant is a place to slow down, sit together and enjoy a satisfying meal. From comforting rice platters to flavour-packed favourites, there is something delicious waiting for you.</p><p class="bn">খাবারের স্বাদ, সুন্দর পরিবেশ আর আন্তরিক আতিথেয়তা—সব মিলিয়ে আপনার সময়টুকু হোক আরও আনন্দময়। পরিবার, বন্ধু কিংবা প্রিয়জন—সবাইকে নিয়ে চলে আসুন।</p><a class="btn outline" href="#gallery">SEE THE EXPERIENCE ↗</a></div></div></section>
+<section class="menu-section" id="menu"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Fresh picks · Food showcase</div><h2>A menu full of favourites.</h2></div><p>এক নজরে দেখে নিন আমাদের কিছু জনপ্রিয় খাবারের ছবি। This is a visual demo menu — items and availability may vary.</p></div>
+<div class="menu-grid">
+<article class="food-card reveal"><img src="assets/grilled-chicken.jpg" alt="Grilled chicken platter"><div class="food-info"><span class="tag">Chef's favourite</span><h3>Grilled Chicken Platter</h3><p>Smoky grilled chicken served with rice and delicious sides.</p></div></article>
+<article class="food-card reveal"><img src="assets/rice-platter.jpg" alt="Special fried rice"><div class="food-info"><span class="tag">Rice & more</span><h3>Special Fried Rice</h3><p>Fluffy rice tossed with vegetables and savoury seasoning.</p></div></article>
+<article class="food-card reveal"><img src="assets/fried-chicken.jpg" alt="Crispy fried chicken"><div class="food-info"><span class="tag">Crunchy delight</span><h3>Crispy Chicken</h3><p>Golden, crunchy bites with a creamy dip on the side.</p></div></article>
+<article class="food-card reveal"><img src="assets/burger.jpg" alt="Burger and fries"><div class="food-info"><span class="tag">All-time classic</span><h3>Royal Garden Burger</h3><p>A juicy burger stacked with fresh greens, served with fries.</p></div></article>
+<article class="food-card reveal"><img src="assets/pasta.jpg" alt="Creamy pasta"><div class="food-info"><span class="tag">Creamy & rich</span><h3>Creamy Pasta</h3><p>Pasta coated in a rich, flavourful sauce with herbs.</p></div></article>
+<article class="food-card reveal"><img src="assets/noodles.jpg" alt="Stir fried noodles"><div class="food-info"><span class="tag">Wok favourite</span><h3>Special Noodles</h3><p>Wok-tossed noodles with vegetables and a savoury finish.</p></div></article>
+</div></div></section>
+<section id="gallery"><div class="wrap"><div class="section-head"><div><div class="eyebrow">A glimpse of Royal Garden</div><h2>Good food looks good.</h2></div><p>একটু খাবারের ছবি, একটু পরিবেশের ঝলক—আপনার পরের আড্ডার জন্য অনুপ্রেরণা।</p></div><div class="gallery reveal"><img src="assets/grilled-chicken.jpg" alt="Grilled chicken"><img src="assets/restaurant-garden.jpg" alt="Restaurant seating"><img src="assets/noodles.jpg" alt="Noodles"><img src="assets/chicken-rice.jpg" alt="Chicken rice platter"><img src="assets/burger.jpg" alt="Burger"></div></div></section>
+<section class="visit" id="visit"><div class="wrap visit-grid"><div class="reveal"><div class="eyebrow">Come say hello</div><h2>Your table is waiting.</h2><p>Planning a meal with friends or family? Find us at Bagan Bari, Madani Avenue. We look forward to welcoming you.</p><p class="bn">ঠিকানা বা যোগাযোগের প্রয়োজনে নিচের তথ্যগুলো ব্যবহার করুন। দেখা হবে Royal Garden-এ!</p><div class="info"><b>Address</b><span>100ft Road, Bagan Bari, Madani Ave,<br>Dhaka 1212, Bangladesh</span></div><div class="info"><b>Phone</b><span><a href="tel:01301447766">01301-447766</a></span></div><div class="info"><b>Opening</b><span>Google listing shows opens at 1:00 PM<br><small>সময় পরিবর্তন হতে পারে—যাওয়ার আগে ফোন করে নিশ্চিত হোন।</small></span></div><a class="btn gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Royal+Garden+Restaurant+100ft+Road+Bagan+Bari+Madani+Ave+Dhaka">OPEN IN GOOGLE MAPS ↗</a></div>
+<div class="map reveal"><div class="pin">⌖</div><h3>Royal Garden Restaurant</h3><p>100ft Road, Bagan Bari<br>Madani Avenue, Dhaka 1212</p><a class="btn outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Royal+Garden+Restaurant+100ft+Road+Bagan+Bari+Madani+Ave+Dhaka">GET DIRECTIONS ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><strong>ROYAL <span style="color:var(--gold)">GARDEN</span></strong><span>Food, friends & beautiful moments. · Dhaka, Bangladesh</span><span>© 2026 Royal Garden Restaurant — Demo website</span></div></footer>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
